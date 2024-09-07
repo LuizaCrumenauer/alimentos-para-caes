@@ -1,0 +1,217 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0c27b, #4b79a1);
+    padding: 20px;
+}
+
+/* Container principal da página */
+.container {
+    background-color: #ffffff00;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos do cabeçalho */
+.header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+/* Estilos da seção de pesquisa */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button:hover {
+    background-color: #fabe3c;
+}
+
+.search-button:hover .search-icon {
+    content: url('../imagens/icone_pesq_2.png'); /* Troca para a nova imagem ao passar o mouse */
+}
+
+.search-icon {
+    width: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 24px;
+}
+
+/* Estilos da seção de resultados */
+.results-container {
+    display: flex;
+    align-items: flex-start;  
+    gap: 20px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    flex-wrap: wrap; /* Garante que os itens fiquem responsivos */
+    justify-content: center;
+}
+
+.results_image {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.dog-image {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    flex-shrink: 0; 
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-height: 400px; /* Altura máxima da div */
+    overflow-y: auto;  /* Scroll quando houver muitos resultados */
+    padding: 20px;
+    background-color: #cecece;
+    border-radius: 10px;
+    
+}
+
+::-webkit-scrollbar {
+    width: 13px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:  #8bb0d3ea; /* Cor do fundo da área de rolagem */
+    border-radius: 4px; /* Arredondamento dos cantos do fundo */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #8652a888; /* Cor da parte que você arrasta */
+    border-radius: 4px; /* Arredondamento dos cantos da parte que você arrasta */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8652a8ec; /* Cor da parte que você arrasta quando o mouse está sobre ela */
+  }
+
+.infos:hover {
+    box-shadow: 0 4px 20px rgba(21, 255, 0, 0.575);
+}
+
+.resultado {
+    background-color: #ffffff00; 
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+
+    .infos {
+        grid-template-columns: repeat(2, 1fr); /* Ajuste para 2 colunas */
+    }
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .search-icon {
+        width: 20px; /* Ajuste o tamanho da imagem para telas menores */
+        height: 20px;
+    }
+
+    .results-container {
+        flex-direction: column; /* Coloca as informações e a imagem de cachorro em coluna */
+        text-align: center;
+    }
+
+    .dog-image {
+        width: 150px; /* Reduz o tamanho da imagem do cachorro para telas menores */
+    }
+
+    .results_image {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .infos {
+        grid-template-columns: 1fr; /* Apenas 1 coluna em telas muito pequenas */
+        overflow-y: visible; /* Remover scroll e usar o scroll da página */
+        max-height: none;
+    }
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .search-input {
+        font-size: 0.9rem;
+    }
+
+    .search-button {
+        font-size: 0.9rem;
+    }
+
+    .search-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dog-image {
+        width: 120px; /* Tamanho da imagem do cachorro para telas muito pequenas */
+    }
+
+    .results_image {
+        width: 120px;
+    }
+}

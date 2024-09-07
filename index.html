@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentos para cães</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/icone2.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Container principal da página -->
+    <div class="container">
+        <!-- Cabeçalho com o título -->
+        <header class="header">
+            <h1>O que seu cachorro pode comer?</h1>
+        </header>
+
+        <!-- Seção da barra de pesquisa temática -->
+        <section class="search-section">
+            <div class="search-container">
+                <input id="campo-pesquisa" type="text" class="search-input" placeholder="Pesquise alimentos para cachorros... &#x1F356">
+                <button  onclick="pesquisar()" class="search-button">
+                    <!-- Ícone de cachorro segurando uma lupa -->
+                    <img src="imagens/icone_pesq.png" alt="Ícone de pesquisa de cachorro" class="search-icon">
+                </button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-container">
+                <div id="informacoes" class="infos"></div>
+                <div><img src="imagens/dog.svg" alt="Imagem de resultados" class="dog-image"></div>
+            </div>
+        </section>
+    </div>
+    <script src="js/dados.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
