@@ -168,6 +168,32 @@ body {
 .verde{
     box-shadow: 0 4px 10px #00FF00;
 }
+footer a {
+    color: #ffffff; 
+    text-decoration: none; /* Remove o sublinhado */
+}
+footer p{
+    color: #ffffff;
+    padding: 5px;
+}
+footer a:hover {
+    color: #ffff00; 
+}
+footer {
+    color: #3d8399;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    max-height: 20rem;
+    font-size: 0.8 rem;
+    border-width: 1px 0px;
+    box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom, #428ca3, #50a7c2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: 15px;
+}
 /* Estilos responsivos */
 @media (max-width: 768px) {
 
@@ -202,6 +228,10 @@ body {
 
     .results_image {
         width: 150px;
+    }
+    footer{
+        font-size: 0.6rem;
+        margin-top: 15px;
     }
 }
 
