@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f0c27b, #4b79a1);
+    background: linear-gradient(135deg, #b7f8db, #50a7c2);
     padding: 20px;
 }
 
@@ -20,7 +20,6 @@ body {
     background-color: #ffffff00;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
     text-align: center;
@@ -39,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .search-input {
@@ -48,6 +47,8 @@ body {
     font-size: 1rem;
     border: 2px solid #ddd;
     border-radius: 5px;
+    color: #3d8399;
+    outline: none;
 }
 
 .search-button {
@@ -63,7 +64,7 @@ body {
 }
 
 .search-button:hover {
-    background-color: #fabe3c;
+    background-color: #52aac5;
 }
 
 .search-button:hover .search-icon {
@@ -78,12 +79,12 @@ body {
 /* Estilos da seção de resultados */
 .results-container {
     display: flex;
-    align-items: flex-start;  
+    align-items: flex-end;  
     gap: 20px;
     color: #ffffff;
     font-size: 1.2rem;
     border-radius: 10px;
-    flex-wrap: wrap; /* Garante que os itens fiquem responsivos */
+    flex-wrap: nowrap; /* Garante que os itens fiquem responsivos */
     justify-content: center;
 }
 
@@ -100,16 +101,28 @@ body {
     height: auto;
     flex-shrink: 0; 
 }
-
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f8d7da; /* Cor de fundo da alerta, ajustável */
+    color: #721c24; /* Cor do texto da alerta, ajustável */
+    border: 1px solid #f5c6cb; /* Cor da borda da alerta, ajustável */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0; /* Margem para separar de outros elementos */
+}
 .infos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     max-height: 400px; /* Altura máxima da div */
     overflow-y: auto;  /* Scroll quando houver muitos resultados */
     padding: 20px;
-    background-color: #cecece;
+    background-color: #ffffff4f;
     border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(41, 41, 41, 0);
     
 }
 
@@ -118,36 +131,48 @@ body {
   }
   
   ::-webkit-scrollbar-track {
-    background:  #8bb0d3ea; /* Cor do fundo da área de rolagem */
+    background:  #ffffffea; /* Cor do fundo da área de rolagem */
     border-radius: 4px; /* Arredondamento dos cantos do fundo */
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #8652a888; /* Cor da parte que você arrasta */
+    background: #52aac5; /* Cor da parte que você arrasta */
     border-radius: 4px; /* Arredondamento dos cantos da parte que você arrasta */
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #8652a8ec; /* Cor da parte que você arrasta quando o mouse está sobre ela */
+    background: #69bd97; /* Cor da parte que você arrasta quando o mouse está sobre ela */
   }
 
-.infos:hover {
-    box-shadow: 0 4px 20px rgba(21, 255, 0, 0.575);
-}
-
 .resultado {
-    background-color: #ffffff00; 
+    background-color: #ffffff8e; 
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
 }
-
+.resultado p {
+    text-align: justify;
+    color: #2e2e2e;
+}
+.resultado h3 {
+    padding-bottom: 20px;
+    color:#3d8399
+    
+}
+.amarelo{
+    box-shadow: 0 4px 10px #FFFF00;
+}
+.vermelho{
+    box-shadow: 0 4px 10px #FF0000;
+}
+.verde{
+    box-shadow: 0 4px 10px #00FF00;
+}
 /* Estilos responsivos */
 @media (max-width: 768px) {
 
     .infos {
-        grid-template-columns: repeat(2, 1fr); /* Ajuste para 2 colunas */
+        grid-template-columns: repeat(1, 1fr); /* Ajuste para 2 colunas */
     }
     .search-container {
         flex-direction: column;
