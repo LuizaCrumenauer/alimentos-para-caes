@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #b7f8db, #50a7c2);
+    background: linear-gradient(135deg, #b7f8db, #4298b3);
     padding: 20px;
 }
 
@@ -29,7 +29,8 @@ body {
 .header h1 {
     color: #ffffff;
     font-size: 2rem;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    font-family: 'Chewy', cursive;
 }
 
 /* Estilos da seção de pesquisa */
@@ -194,6 +195,70 @@ footer {
     left: 0;
     margin-top: 15px;
 }
+
+/* Seção da legenda */
+.legend-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff4f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.legend-section h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o título */
+}
+
+.legend-container {
+    display: flex;
+    justify-content: space-between; /* Ajusta o espaçamento entre os itens */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebrar para a próxima linha em telas menores */
+}
+
+.legend-item {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center;
+    gap: 10px;
+    text-align: center; /* Centraliza o texto */
+    width: 30%; /* Limita o tamanho das legendas para caber na div */
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+/* Preenche as cores na legenda */
+.color-box.verde {
+    background-color: #00FF00; /* Verde preenchido */
+}
+
+.color-box.amarelo {
+    background-color: #FFFF00; /* Amarelo preenchido */
+}
+
+.color-box.vermelho {
+    background-color: #FF0000; /* Vermelho preenchido */
+}
+
+.legend-item h4 {
+    color: #ffffff;
+    margin: 0;
+}
+
+.legend-item p {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
 
@@ -227,13 +292,46 @@ footer {
     }
 
     .results_image {
-        width: 150px;
+        width: 120px;
     }
     footer{
         font-size: 0.6rem;
         margin-top: 15px;
     }
+
+    /* Ajustes de responsividade para a seção da legenda */
+    .legend-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    .legend-item {
+        max-width: 90%; /* Reduz a largura dos itens para caber melhor na tela */
+        padding: 10px; /* Adiciona um espaçamento interno menor */
+        margin-bottom: 10px; /* Espaço entre os itens */
+    }
+
+    .legend-section {
+        padding: 10px; /* Ajusta o espaçamento interno da seção */
+    }
+
+    .legend-item h4 {
+        font-size: 1.2rem; /* Reduz o tamanho do texto para economizar espaço */
+    }
+
+    .legend-item p {
+        font-size: 0.9rem; /* Reduz o tamanho do parágrafo para adequar ao layout */
+    }
+
+    .color-box {
+        width: 15px; /* Diminui o tamanho das caixas de cor */
+        height: 15px;
+    }
+
+    
 }
+
 
 @media (max-width: 480px) {
     .infos {
@@ -246,7 +344,7 @@ footer {
     }
 
     .header h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
     
     .search-input {
